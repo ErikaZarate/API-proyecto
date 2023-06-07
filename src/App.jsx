@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-
+const api_key = "J1QGvogS33v1UR0TCRZBEeS53d8UcekPP5wSvwLcr6w5U9mBB6bKcE50"
 
 export default function Expo () {
     const [query, setQuery ] = useState("people")
@@ -10,7 +10,7 @@ export default function Expo () {
         await fetch(
                 `https://api.pexels.com/v1/search?query=${query}`,{
                     headers: {
-                        Authorization: process.env.REACT_APP_YOUR_API_KEY,
+                        Authorization: api_key,
                     }
         })
         .then((resp) => {
